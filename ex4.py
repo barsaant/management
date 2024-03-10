@@ -20,7 +20,7 @@ tn.write(user.encode("ascii") + b"\n")
 
 # Нууц үгийг уншин ascii-руу энкод хийн switch руу command бичнэ. 
 if password:
-  tn.read_until(b"password")
+  tn.read_until(b"Password: ")
   tn.write(password.encode("ascii") + b"\n")
 
 tn.write(b"enable\n")                # Свичийн тохиргооны горимыг идэвхжүүлнэ.
