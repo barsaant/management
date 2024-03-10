@@ -30,4 +30,9 @@ tn.write(b"conf t\n")                # Свичийн глобал тохирг�
 # Шинэ user нэмж өгнө.
 tn.write(b"username barsbold password 1234 1\n")  
 tn.write(b"end \n")                  # Тохиргооноос гарна.
+tn.write(b"show run\n")              # Одоо ажиллаж буй тохиргоог харуулж байна.
+tn.write("\n")  
 tn.write(b"exit \n")   
+
+# Ascii-руу Decode хийнэ.
+print(tn.read_all().decode("ascii")) 

@@ -32,5 +32,8 @@ tn.write(b"interface loopback 1\n")  # Интерфейс дээр loopback үү
 tn.write(b"ip addr 10.20.30.41 255.255.255.0\n")
 tn.write(b"no sh\n")                 # Интерфейсийг асаана.
 tn.write(b"end \n")                  # Тохиргооноос гарна.
-tn.write(b"show ip int brief")       # Интерфейсийн жагсаалтыг харна.
+tn.write(b"show ip int brief \n")       # Интерфейсийн жагсаалтыг харна.
 tn.write(b"exit \n")
+
+# Ascii-руу Decode хийнэ.
+print(tn.read_all().decode("ascii")) 

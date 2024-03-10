@@ -27,6 +27,7 @@ if password:
 tn.write(b"enable\n")              # Свичийн тохиргооны горимыг идэвхжүүлнэ.
 tn.write(b"cisco\n")
 tn.write(b"show run\n")            # Одоо ажиллаж буй тохиргоог харуулж байна.
+tn.write("\n")  
 tn.write(b"end\n")                 # Тохиргооноос гарна.
 tn.write(b"exit\n")                # Тохиргооны горимоос гарна.
 

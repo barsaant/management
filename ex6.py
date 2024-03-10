@@ -28,7 +28,10 @@ tn.write(b"cisco\n")
 tn.write(b"conf t\n")                # Свичийн глобал тохиргооны горимд шилжинэ.
 
 # Шинэ user нэмж өгнө.
-tn.write(b"username barsbold password 1234 1\n")  
+tn.write(b"no int vlan 20\n")        # VLAN 20-г устгаж өгнө.
 tn.write(b"end \n")                  # Тохиргооноос гарна.
-tn.write(b"show ip int brief")       # Интерфейсийн жагсаалтыг харна.
+tn.write(b"show ip int brief \n")       # Интерфейсийн жагсаалтыг харна.
 tn.write(b"exit \n")   
+
+# Ascii-руу Decode хийнэ.
+print(tn.read_all().decode("ascii")) 
